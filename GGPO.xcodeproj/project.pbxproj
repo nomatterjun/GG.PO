@@ -12,12 +12,6 @@
 		688B0D332A341E7300D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D322A341E7300D5F68E /* Assets.xcassets */; };
 		688B0D362A341E7300D5F68E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D352A341E7300D5F68E /* Preview Assets.xcassets */; };
 		688B0D382A341E7300D5F68E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D372A341E7300D5F68E /* Item.swift */; };
-		688B0D452A341E9D00D5F68E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D442A341E9D00D5F68E /* WidgetKit.framework */; };
-		688B0D472A341E9D00D5F68E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D462A341E9D00D5F68E /* SwiftUI.framework */; };
-		688B0D542A341E9E00D5F68E /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 688B0D422A341E9D00D5F68E /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		688B0D5E2A341EC000D5F68E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D442A341E9D00D5F68E /* WidgetKit.framework */; };
-		688B0D5F2A341EC000D5F68E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D462A341E9D00D5F68E /* SwiftUI.framework */; };
-		688B0D6C2A341EC100D5F68E /* WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 688B0D5D2A341EC000D5F68E /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		688B0D752A342E2800D5F68E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D442A341E9D00D5F68E /* WidgetKit.framework */; };
 		688B0D762A342E2800D5F68E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D462A341E9D00D5F68E /* SwiftUI.framework */; };
 		688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */; };
@@ -25,23 +19,13 @@
 		688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */; };
 		688B0D7F2A342E2900D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D7E2A342E2900D5F68E /* Assets.xcassets */; };
 		688B0D832A342E2900D5F68E /* WidgetExtentsionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
+		688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
+		688B0D8F2A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
+		688B0D902A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		688B0D522A341E9E00D5F68E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688B0D232A341E7200D5F68E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688B0D412A341E9D00D5F68E;
-			remoteInfo = widgetExtension;
-		};
-		688B0D6A2A341EC100D5F68E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688B0D232A341E7200D5F68E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688B0D5C2A341EC000D5F68E;
-			remoteInfo = WidgetExtension;
-		};
 		688B0D812A342E2900D5F68E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 688B0D232A341E7200D5F68E /* Project object */;
@@ -58,9 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				688B0D6C2A341EC100D5F68E /* WidgetExtension.appex in Embed Foundation Extensions */,
 				688B0D832A342E2900D5F68E /* WidgetExtentsionExtension.appex in Embed Foundation Extensions */,
-				688B0D542A341E9E00D5F68E /* widgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,16 +56,16 @@
 		688B0D322A341E7300D5F68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B0D352A341E7300D5F68E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		688B0D372A341E7300D5F68E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		688B0D422A341E9D00D5F68E /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D442A341E9D00D5F68E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		688B0D462A341E9D00D5F68E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		688B0D5D2A341EC000D5F68E /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtentsionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsionBundle.swift; sourceTree = "<group>"; };
 		688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsionLiveActivity.swift; sourceTree = "<group>"; };
 		688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsion.swift; sourceTree = "<group>"; };
 		688B0D7E2A342E2900D5F68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B0D802A342E2900D5F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688B0D8B2A343CF800D5F68E /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		688B0D8E2A343DD700D5F68E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,24 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D3F2A341E9D00D5F68E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688B0D472A341E9D00D5F68E /* SwiftUI.framework in Frameworks */,
-				688B0D452A341E9D00D5F68E /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D5A2A341EC000D5F68E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688B0D5F2A341EC000D5F68E /* SwiftUI.framework in Frameworks */,
-				688B0D5E2A341EC000D5F68E /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				688B0D2B2A341E7200D5F68E /* GGPO.app */,
-				688B0D422A341E9D00D5F68E /* widgetExtension.appex */,
-				688B0D5D2A341EC000D5F68E /* WidgetExtension.appex */,
 				688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */,
 			);
 			name = Products;
@@ -148,7 +110,10 @@
 		688B0D2D2A341E7200D5F68E /* GGPO */ = {
 			isa = PBXGroup;
 			children = (
-				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
+				688B0D8A2A343CC200D5F68E /* Resource */,
+				688B0D892A343CBE00D5F68E /* View */,
+				688B0D882A343CB800D5F68E /* ViewModel */,
+				688B0D872A343CB100D5F68E /* Model */,
 				688B0D302A341E7200D5F68E /* ContentView.swift */,
 				688B0D322A341E7300D5F68E /* Assets.xcassets */,
 				688B0D372A341E7300D5F68E /* Item.swift */,
@@ -186,6 +151,37 @@
 			path = WidgetExtentsion;
 			sourceTree = "<group>";
 		};
+		688B0D872A343CB100D5F68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				688B0D8B2A343CF800D5F68E /* Champion.swift */,
+				688B0D8E2A343DD700D5F68E /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		688B0D882A343CB800D5F68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		688B0D892A343CBE00D5F68E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		688B0D8A2A343CC200D5F68E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,48 +197,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				688B0D532A341E9E00D5F68E /* PBXTargetDependency */,
-				688B0D6B2A341EC100D5F68E /* PBXTargetDependency */,
 				688B0D822A342E2900D5F68E /* PBXTargetDependency */,
 			);
 			name = GGPO;
 			productName = GGPO;
 			productReference = 688B0D2B2A341E7200D5F68E /* GGPO.app */;
 			productType = "com.apple.product-type.application";
-		};
-		688B0D412A341E9D00D5F68E /* widgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688B0D552A341E9E00D5F68E /* Build configuration list for PBXNativeTarget "widgetExtension" */;
-			buildPhases = (
-				688B0D3E2A341E9D00D5F68E /* Sources */,
-				688B0D3F2A341E9D00D5F68E /* Frameworks */,
-				688B0D402A341E9D00D5F68E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = widgetExtension;
-			productName = widgetExtension;
-			productReference = 688B0D422A341E9D00D5F68E /* widgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		688B0D5C2A341EC000D5F68E /* WidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688B0D6D2A341EC100D5F68E /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
-			buildPhases = (
-				688B0D592A341EC000D5F68E /* Sources */,
-				688B0D5A2A341EC000D5F68E /* Frameworks */,
-				688B0D5B2A341EC000D5F68E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WidgetExtension;
-			productName = WidgetExtension;
-			productReference = 688B0D5D2A341EC000D5F68E /* WidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		688B0D732A342E2800D5F68E /* WidgetExtentsionExtension */ = {
 			isa = PBXNativeTarget;
@@ -274,12 +234,6 @@
 					688B0D2A2A341E7200D5F68E = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					688B0D412A341E9D00D5F68E = {
-						CreatedOnToolsVersion = 15.0;
-					};
-					688B0D5C2A341EC000D5F68E = {
-						CreatedOnToolsVersion = 15.0;
-					};
 					688B0D732A342E2800D5F68E = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -299,8 +253,6 @@
 			projectRoot = "";
 			targets = (
 				688B0D2A2A341E7200D5F68E /* GGPO */,
-				688B0D412A341E9D00D5F68E /* widgetExtension */,
-				688B0D5C2A341EC000D5F68E /* WidgetExtension */,
 				688B0D732A342E2800D5F68E /* WidgetExtentsionExtension */,
 			);
 		};
@@ -313,20 +265,6 @@
 			files = (
 				688B0D362A341E7300D5F68E /* Preview Assets.xcassets in Resources */,
 				688B0D332A341E7300D5F68E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D402A341E9D00D5F68E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D5B2A341EC000D5F68E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,23 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
+				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D3E2A341E9D00D5F68E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688B0D592A341EC000D5F68E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */,
 				688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */,
+				688B0D902A343DD700D5F68E /* User.swift in Sources */,
 				688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,16 +306,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		688B0D532A341E9E00D5F68E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688B0D412A341E9D00D5F68E /* widgetExtension */;
-			targetProxy = 688B0D522A341E9E00D5F68E /* PBXContainerItemProxy */;
-		};
-		688B0D6B2A341EC100D5F68E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688B0D5C2A341EC000D5F68E /* WidgetExtension */;
-			targetProxy = 688B0D6A2A341EC100D5F68E /* PBXContainerItemProxy */;
-		};
 		688B0D822A342E2900D5F68E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 688B0D732A342E2800D5F68E /* WidgetExtentsionExtension */;
@@ -573,110 +491,6 @@
 			};
 			name = Release;
 		};
-		688B0D562A341E9E00D5F68E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		688B0D572A341E9E00D5F68E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		688B0D6E2A341EC100D5F68E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		688B0D6F2A341EC100D5F68E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Widget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		688B0D852A342E2900D5F68E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,24 +560,6 @@
 			buildConfigurations = (
 				688B0D3C2A341E7300D5F68E /* Debug */,
 				688B0D3D2A341E7300D5F68E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688B0D552A341E9E00D5F68E /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688B0D562A341E9E00D5F68E /* Debug */,
-				688B0D572A341E9E00D5F68E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688B0D6D2A341EC100D5F68E /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688B0D6E2A341EC100D5F68E /* Debug */,
-				688B0D6F2A341EC100D5F68E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
