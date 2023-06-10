@@ -1,6 +1,6 @@
 //
-//  WidgetLiveActivity.swift
-//  Widget
+//  WidgetExtentsionLiveActivity.swift
+//  WidgetExtentsion
 //
 //  Created by Lee on 2023/06/10.
 //
@@ -9,7 +9,7 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct WidgetAttributes: ActivityAttributes {
+struct WidgetExtentsionAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
         var emoji: String
@@ -19,9 +19,9 @@ struct WidgetAttributes: ActivityAttributes {
     var name: String
 }
 
-struct WidgetLiveActivity: Widget {
+struct WidgetExtentsionLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: WidgetAttributes.self) { context in
+        ActivityConfiguration(for: WidgetExtentsionAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
                 Text("Hello \(context.state.emoji)")
@@ -56,25 +56,25 @@ struct WidgetLiveActivity: Widget {
     }
 }
 
-extension WidgetAttributes {
-    fileprivate static var preview: WidgetAttributes {
-        WidgetAttributes(name: "World")
+extension WidgetExtentsionAttributes {
+    fileprivate static var preview: WidgetExtentsionAttributes {
+        WidgetExtentsionAttributes(name: "World")
     }
 }
 
-extension WidgetAttributes.ContentState {
-    fileprivate static var smiley: WidgetAttributes.ContentState {
-        WidgetAttributes.ContentState(emoji: "😀")
+extension WidgetExtentsionAttributes.ContentState {
+    fileprivate static var smiley: WidgetExtentsionAttributes.ContentState {
+        WidgetExtentsionAttributes.ContentState(emoji: "😀")
      }
      
-     fileprivate static var starEyes: WidgetAttributes.ContentState {
-         WidgetAttributes.ContentState(emoji: "🤩")
+     fileprivate static var starEyes: WidgetExtentsionAttributes.ContentState {
+         WidgetExtentsionAttributes.ContentState(emoji: "🤩")
      }
 }
 
-#Preview("Notification", as: .content, using: WidgetAttributes.preview) {
-   WidgetLiveActivity()
+#Preview("Notification", as: .content, using: WidgetExtentsionAttributes.preview) {
+   WidgetExtentsionLiveActivity()
 } contentStates: {
-    WidgetAttributes.ContentState.smiley
-    WidgetAttributes.ContentState.starEyes
+    WidgetExtentsionAttributes.ContentState.smiley
+    WidgetExtentsionAttributes.ContentState.starEyes
 }

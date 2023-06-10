@@ -1,6 +1,6 @@
 //
-//  Widget.swift
-//  Widget
+//  WidgetExtentsion.swift
+//  WidgetExtentsion
 //
 //  Created by Lee on 2023/06/10.
 //
@@ -39,7 +39,7 @@ struct SimpleEntry: TimelineEntry {
     let emoji: String
 }
 
-struct WidgetEntryView : View {
+struct WidgetExtentsionEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -54,12 +54,12 @@ struct WidgetEntryView : View {
     }
 }
 
-struct Widget: Widget {
-    let kind: String = "Widget"
+struct WidgetExtentsion: Widget {
+    let kind: String = "WidgetExtentsion"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            WidgetEntryView(entry: entry)
+            WidgetExtentsionEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
@@ -67,7 +67,7 @@ struct Widget: Widget {
 }
 
 #Preview(as: .systemSmall) {
-    Widget()
+    WidgetExtentsion()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
     SimpleEntry(date: .now, emoji: "🤩")
