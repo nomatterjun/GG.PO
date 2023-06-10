@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-
+@Model
 final class User {
     var name: String
     var tier: String
