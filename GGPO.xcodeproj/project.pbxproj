@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
+		68760CAF2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
 		688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D2E2A341E7200D5F68E /* GGPOApp.swift */; };
 		688B0D312A341E7200D5F68E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D302A341E7200D5F68E /* ContentView.swift */; };
 		688B0D332A341E7300D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D322A341E7300D5F68E /* Assets.xcassets */; };
@@ -23,6 +25,10 @@
 		688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
 		688B0D8F2A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
 		688B0D902A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
+		68946BF92A3442D00090207F /* VersusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BF82A3442D00090207F /* VersusWidget.swift */; };
+		68946BFA2A3442D00090207F /* VersusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BF82A3442D00090207F /* VersusWidget.swift */; };
+		68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */; };
+		68946BFD2A3445B90090207F /* VersusWidgetSystemLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		68760CAD2A34546E00FD9A21 /* Trapezium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezium.swift; sourceTree = "<group>"; };
 		688B0D2B2A341E7200D5F68E /* GGPO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGPO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D2E2A341E7200D5F68E /* GGPOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGPOApp.swift; sourceTree = "<group>"; };
 		688B0D302A341E7200D5F68E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		688B0D802A342E2900D5F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688B0D8B2A343CF800D5F68E /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		688B0D8E2A343DD700D5F68E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		68946BF82A3442D00090207F /* VersusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersusWidget.swift; sourceTree = "<group>"; };
+		68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersusWidgetSystemLargeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 		688B0D772A342E2800D5F68E /* WidgetExtentsion */ = {
 			isa = PBXGroup;
 			children = (
+				68946BF72A34429A0090207F /* Vursus */,
 				688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */,
 				688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */,
 				688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */,
@@ -180,6 +190,24 @@
 				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		68946BF72A34429A0090207F /* Vursus */ = {
+			isa = PBXGroup;
+			children = (
+				68946BFE2A3445BD0090207F /* view */,
+				68946BF82A3442D00090207F /* VersusWidget.swift */,
+			);
+			path = Vursus;
+			sourceTree = "<group>";
+		};
+		68946BFE2A3445BD0090207F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */,
+				68760CAD2A34546E00FD9A21 /* Trapezium.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,9 +313,12 @@
 			files = (
 				688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
+				68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
 				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
+				68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
+				68946BF92A3442D00090207F /* VersusWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +328,12 @@
 			files = (
 				688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */,
+				68946BFD2A3445B90090207F /* VersusWidgetSystemLargeView.swift in Sources */,
 				688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */,
 				688B0D902A343DD700D5F68E /* User.swift in Sources */,
+				68760CAF2A34546E00FD9A21 /* Trapezium.swift in Sources */,
 				688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */,
+				68946BFA2A3442D00090207F /* VersusWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

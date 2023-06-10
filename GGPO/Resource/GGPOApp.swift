@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 @main
 struct GGPOApp: App {
@@ -16,5 +17,6 @@ struct GGPOApp: App {
             ContentView()
         }
         .modelContainer(for: Item.self)
+        
     }
 }
