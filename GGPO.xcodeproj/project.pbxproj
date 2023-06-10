@@ -19,6 +19,10 @@
 		688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */; };
 		688B0D7F2A342E2900D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D7E2A342E2900D5F68E /* Assets.xcassets */; };
 		688B0D832A342E2900D5F68E /* WidgetExtentsionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
+		688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
+		688B0D8F2A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
+		688B0D902A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,8 @@
 		688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsion.swift; sourceTree = "<group>"; };
 		688B0D7E2A342E2900D5F68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B0D802A342E2900D5F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688B0D8B2A343CF800D5F68E /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		688B0D8E2A343DD700D5F68E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,10 @@
 		688B0D2D2A341E7200D5F68E /* GGPO */ = {
 			isa = PBXGroup;
 			children = (
-				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
+				688B0D8A2A343CC200D5F68E /* Resource */,
+				688B0D892A343CBE00D5F68E /* View */,
+				688B0D882A343CB800D5F68E /* ViewModel */,
+				688B0D872A343CB100D5F68E /* Model */,
 				688B0D302A341E7200D5F68E /* ContentView.swift */,
 				688B0D322A341E7300D5F68E /* Assets.xcassets */,
 				688B0D372A341E7300D5F68E /* Item.swift */,
@@ -140,6 +149,37 @@
 				688B0D802A342E2900D5F68E /* Info.plist */,
 			);
 			path = WidgetExtentsion;
+			sourceTree = "<group>";
+		};
+		688B0D872A343CB100D5F68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				688B0D8B2A343CF800D5F68E /* Champion.swift */,
+				688B0D8E2A343DD700D5F68E /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		688B0D882A343CB800D5F68E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		688B0D892A343CBE00D5F68E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		688B0D8A2A343CC200D5F68E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
+				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */,
 				688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */,
 				688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */,
+				688B0D902A343DD700D5F68E /* User.swift in Sources */,
 				688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
