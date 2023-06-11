@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E7527B52A34D9F000DBA222 /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7527B42A34D9F000DBA222 /* GPTextField.swift */; };
+		2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */; };
+		2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */; };
+		2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */; };
 		68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
 		68760CAF2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
 		688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D2E2A341E7200D5F68E /* GGPOApp.swift */; };
@@ -56,10 +60,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E7527B42A34D9F000DBA222 /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
+		2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VIew+Extension.swift"; sourceTree = "<group>"; };
+		2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButtonStyle.swift; sourceTree = "<group>"; };
 		68760CAD2A34546E00FD9A21 /* Trapezium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezium.swift; sourceTree = "<group>"; };
 		688B0D2B2A341E7200D5F68E /* GGPO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGPO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D2E2A341E7200D5F68E /* GGPOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGPOApp.swift; sourceTree = "<group>"; };
-		688B0D302A341E7200D5F68E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		688B0D302A341E7200D5F68E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		688B0D322A341E7300D5F68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B0D352A341E7300D5F68E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		688B0D372A341E7300D5F68E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -97,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E7527B62A34EAC500DBA222 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		688B0D222A341E7200D5F68E = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +137,8 @@
 			children = (
 				688B0D8A2A343CC200D5F68E /* Resource */,
 				688B0D892A343CBE00D5F68E /* View */,
-				688B0D882A343CB800D5F68E /* ViewModel */,
 				688B0D872A343CB100D5F68E /* Model */,
-				688B0D302A341E7200D5F68E /* ContentView.swift */,
+				2E7527B62A34EAC500DBA222 /* Utils */,
 				688B0D322A341E7300D5F68E /* Assets.xcassets */,
 				688B0D372A341E7300D5F68E /* Item.swift */,
 				688B0D342A341E7300D5F68E /* Preview Content */,
@@ -166,20 +181,17 @@
 			children = (
 				688B0D8B2A343CF800D5F68E /* Champion.swift */,
 				688B0D8E2A343DD700D5F68E /* User.swift */,
+				2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		688B0D882A343CB800D5F68E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		688B0D892A343CBE00D5F68E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				688B0D302A341E7200D5F68E /* ContentView.swift */,
+				2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */,
+				2E7527B42A34D9F000DBA222 /* GPTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,9 +327,13 @@
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
 				68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
+				2E7527B52A34D9F000DBA222 /* GPTextField.swift in Sources */,
 				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
+				2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */,
 				68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
+				2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */,
+				2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */,
 				68946BF92A3442D00090207F /* VersusWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,8 +497,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,8 +526,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

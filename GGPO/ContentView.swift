@@ -9,52 +9,50 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-    
+    @StateObject var viewModel = ContentViewModel()
+    @FocusState private var isFocused: Bool
+
+    @State private var givenName: String = ""
+
+    @State var text: String = ""
+    @State var tapped: Bool = false
+
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
+        VStack {
+            VStack(spacing: 4) {
+                Text("League of Legends")
+                    .font(.system(size: 24, weight: .bold))
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+                Text("Win Streaks Tracker")
+                    .font(.system(size: 18, weight: .semibold))
             }
+            .padding(.top, 48)
+
+            Spacer()
+
+            VStack(spacing: 24) {
+                GPTextField(text: $text)
+                    .focused($isFocused)
+                
+                Button("Start") {
+                    isFocused = false
+                }
+                .buttonStyle(GPButtonStyle(backgroundColor: .primary, foreGroundColor: .white))
+            }
+
+            Spacer()
+        }
+        .background(.white)
+        .padding(.horizontal, 24)
+        .onAppear {
+            self.isFocused = true
+        }
+        .onTapGesture {
+            self.isFocused = false
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
