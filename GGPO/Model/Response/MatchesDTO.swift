@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MatchesDTO: Decodable {
+struct MatchesDTO: Decodable, DataTransferObject {
     let list: [String]
 
     enum CodingKeys: String, CodingKey {

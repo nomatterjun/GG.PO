@@ -9,12 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @FocusState private var isFocused: Bool
+    private let urlSession = URLSessionService()
 
+    @FocusState private var isFocused: Bool
     @State private var givenName: String = ""
 
-    @State var text: String = ""
-    @State var tapped: Bool = false
+    @State private var text: String = ""
+    @State private var tapped: Bool = false
 
     var body: some View {
         VStack {
@@ -30,11 +31,19 @@ struct ContentView: View {
             Spacer()
 
             VStack(spacing: 24) {
-                GPTextField(text: $text)
-                    .focused($isFocused)
-                
+                GPTextField(text: self.$text)
+                    .focused(self.$isFocused)
+
                 Button("Start") {
-                    isFocused = false
+                    self.isFocused = false
+                    Task {
+                        do {
+                            let summoner = try await self.urlSession.fetchSummoner(by: self.text)
+                            print(summoner)
+                        } catch {
+                            //
+                        }
+                    }
                 }
                 .buttonStyle(GPButtonStyle(backgroundColor: .primary, foreGroundColor: .white))
             }

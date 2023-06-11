@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MatchDTO: Decodable {
+struct MatchDTO: Decodable, DataTransferObject {
     let metadata: MetadataDTO
     let info: InfoDTO
 

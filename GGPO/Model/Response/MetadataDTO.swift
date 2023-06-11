@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MetadataDTO: Decodable {
+struct MetadataDTO: Decodable, DataTransferObject {
     let dataVersion: String
     let matchID: String
     let participants: [String]

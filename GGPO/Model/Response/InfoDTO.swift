@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InfoDTO: Decodable {
+struct InfoDTO: Decodable, DataTransferObject {
     /// Unix timestamp for when the game is created on the game server (i.e., the loading screen).
     let gameCreation: Int
     /// This field returns the game length in milliseconds calculated from gameEndTimestamp - gameStartTimestamp.

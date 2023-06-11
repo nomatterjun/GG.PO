@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SummonerDTO: Decodable {
+struct SummonerDTO: Decodable, DataTransferObject {
     let accountID: String
     let profileIconID: Int
     let revisionDate: Int

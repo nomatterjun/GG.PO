@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ParticipantDTO: Decodable {
+struct ParticipantDTO: Decodable, DataTransferObject {
     let individualPosition: String
     let lane: String
     let teamPosition: String

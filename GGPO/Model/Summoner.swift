@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Summoner {
+final class Summoner: Storable {
     var accountID: String
     var profileIconID: Int
     var revisionDate: Int
@@ -26,5 +26,27 @@ final class Summoner {
         self.id = id
         self.puuid = puuid
         self.summonerLevel = summonerLevel
+    }
+
+    init(dto: SummonerDTO) {
+        self.accountID = dto.accountID
+        self.profileIconID = dto.profileIconID
+        self.revisionDate = dto.revisionDate
+        self.name = dto.name
+        self.id = dto.id
+        self.puuid = dto.puuid
+        self.summonerLevel = dto.summonerLevel
+    }
+
+    func dto() -> SummonerDTO {
+        SummonerDTO(
+            accountID: self.accountID,
+            profileIconID: self.profileIconID,
+            revisionDate: self.revisionDate,
+            name: self.name,
+            id: self.id,
+            puuid: self.puuid,
+            summonerLevel: self.summonerLevel
+        )
     }
 }
