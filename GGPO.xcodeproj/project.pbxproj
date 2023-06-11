@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD002A356356006C1ACE /* MatchesDTO.swift */; };
+		2E73CD032A3563BA006C1ACE /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD022A3563BA006C1ACE /* MatchDTO.swift */; };
+		2E73CD052A3563E7006C1ACE /* MetadataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */; };
+		2E73CD072A356420006C1ACE /* InfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD062A356420006C1ACE /* InfoDTO.swift */; };
+		2E73CD092A356584006C1ACE /* ParticipantDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD082A356584006C1ACE /* ParticipantDTO.swift */; };
+		2E73CD0B2A3565BE006C1ACE /* TeamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD0A2A3565BE006C1ACE /* TeamDTO.swift */; };
+		2E73CD0E2A35AD51006C1ACE /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD0D2A35AD51006C1ACE /* URLSessionService.swift */; };
+		2E73CD102A35ADB3006C1ACE /* MatchPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD0F2A35ADB3006C1ACE /* MatchPaths.swift */; };
+		2E73CD122A35AFD8006C1ACE /* URLSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD112A35AFD8006C1ACE /* URLSessionError.swift */; };
 		2E7527B52A34D9F000DBA222 /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7527B42A34D9F000DBA222 /* GPTextField.swift */; };
 		2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */; };
 		2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */; };
@@ -60,6 +69,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E73CD002A356356006C1ACE /* MatchesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDTO.swift; sourceTree = "<group>"; };
+		2E73CD022A3563BA006C1ACE /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
+		2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDTO.swift; sourceTree = "<group>"; };
+		2E73CD062A356420006C1ACE /* InfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDTO.swift; sourceTree = "<group>"; };
+		2E73CD082A356584006C1ACE /* ParticipantDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantDTO.swift; sourceTree = "<group>"; };
+		2E73CD0A2A3565BE006C1ACE /* TeamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDTO.swift; sourceTree = "<group>"; };
+		2E73CD0D2A35AD51006C1ACE /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
+		2E73CD0F2A35ADB3006C1ACE /* MatchPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPaths.swift; sourceTree = "<group>"; };
+		2E73CD112A35AFD8006C1ACE /* URLSessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionError.swift; sourceTree = "<group>"; };
 		2E7527B42A34D9F000DBA222 /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VIew+Extension.swift"; sourceTree = "<group>"; };
 		2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -105,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E73CD0C2A35AD3A006C1ACE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2E73CD0D2A35AD51006C1ACE /* URLSessionService.swift */,
+				2E73CD112A35AFD8006C1ACE /* URLSessionError.swift */,
+				2E73CD0F2A35ADB3006C1ACE /* MatchPaths.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2E7527B62A34EAC500DBA222 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +166,7 @@
 				688B0D8A2A343CC200D5F68E /* Resource */,
 				688B0D892A343CBE00D5F68E /* View */,
 				688B0D872A343CB100D5F68E /* Model */,
+				2E73CD0C2A35AD3A006C1ACE /* Services */,
 				2E7527B62A34EAC500DBA222 /* Utils */,
 				688B0D322A341E7300D5F68E /* Assets.xcassets */,
 				688B0D372A341E7300D5F68E /* Item.swift */,
@@ -192,6 +221,12 @@
 				688B0D302A341E7200D5F68E /* ContentView.swift */,
 				2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */,
 				2E7527B42A34D9F000DBA222 /* GPTextField.swift */,
+				2E73CD002A356356006C1ACE /* MatchesDTO.swift */,
+				2E73CD022A3563BA006C1ACE /* MatchDTO.swift */,
+				2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */,
+				2E73CD062A356420006C1ACE /* InfoDTO.swift */,
+				2E73CD082A356584006C1ACE /* ParticipantDTO.swift */,
+				2E73CD0A2A3565BE006C1ACE /* TeamDTO.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,13 +359,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */,
+				2E73CD0E2A35AD51006C1ACE /* URLSessionService.swift in Sources */,
+				2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */,
+				2E73CD0B2A3565BE006C1ACE /* TeamDTO.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
+				2E73CD092A356584006C1ACE /* ParticipantDTO.swift in Sources */,
 				68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
+				2E73CD102A35ADB3006C1ACE /* MatchPaths.swift in Sources */,
+				2E73CD052A3563E7006C1ACE /* MetadataDTO.swift in Sources */,
 				2E7527B52A34D9F000DBA222 /* GPTextField.swift in Sources */,
 				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
 				2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */,
 				68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */,
+				2E73CD032A3563BA006C1ACE /* MatchDTO.swift in Sources */,
+				2E73CD122A35AFD8006C1ACE /* URLSessionError.swift in Sources */,
+				2E73CD072A356420006C1ACE /* InfoDTO.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
 				2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */,
 				2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */,
