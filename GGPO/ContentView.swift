@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @StateObject var viewModel = ContentViewModel()
     @FocusState private var isFocused: Bool
 
     @State private var givenName: String = ""
