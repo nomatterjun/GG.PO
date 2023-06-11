@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct RecentWidgetRecordsView: View {
     var entry: RecentWidgetProvider.Entry
@@ -29,5 +30,7 @@ struct RecentWidgetRecordsView: View {
 }
 
 #Preview {
-    RecentWidgetRecordsView(entry: RecentWidgetEntry(date: .now, records: [Record(date: .now, isWin: true)]))
+    RecentWidgetRecordsView(entry: RecentWidgetEntry(date: .now,
+                                                     records: [Record(date: .now, isWin: true)],
+                                                     relevance: TimelineEntryRelevance(score: 1.0)))
 }

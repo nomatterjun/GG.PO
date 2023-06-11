@@ -10,4 +10,5 @@ import WidgetKit
 struct RecentWidgetEntry: TimelineEntry {
     let date: Date
     let records: [Record]
+    let relevance: TimelineEntryRelevance?
 }

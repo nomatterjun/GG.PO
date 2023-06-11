@@ -10,11 +10,18 @@ import SwiftUI
 struct RecentWidgetEntryView: View {
     var entry: RecentWidgetProvider.Entry
 
+    @Environment(\.widgetFamily) var family
+
+    @ViewBuilder
     var body: some View {
-        HStack(alignment: .top, spacing: 24) {
-            RecentWidgetInfoView(entry: self.entry)
-            RecentWidgetRecordsView(entry: self.entry)
+        switch self.family {
+        case .systemMedium:
+            HStack(alignment: .top, spacing: 24) {
+                RecentWidgetInfoView(entry: self.entry)
+                RecentWidgetRecordsView(entry: self.entry)
+            }
+        default:
+            Text("sdf")
         }
-        .containerBackground(.background.tertiary, for: .widget)
     }
 }

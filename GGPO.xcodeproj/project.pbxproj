@@ -17,6 +17,11 @@
 		2E6FBE1E2A35C57D007C2F34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */; };
 		2E6FBE1F2A35C59E007C2F34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */; };
 		2E6FBE222A35C669007C2F34 /* RecentWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE202A35C616007C2F34 /* RecentWidgetEntryView.swift */; };
+		2E6FBE2D2A35D504007C2F34 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6FBE2C2A35D504007C2F34 /* Intents.framework */; };
+		2E6FBE302A35D504007C2F34 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE2F2A35D504007C2F34 /* IntentHandler.swift */; };
+		2E6FBE342A35D504007C2F34 /* GGPOIntentHandler.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2E6FBE2B2A35D504007C2F34 /* GGPOIntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E6FBE392A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE382A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition */; };
+		2E6FBE3A2A35E1D3007C2F34 /* DynamicSummonerSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE382A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition */; };
 		2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD002A356356006C1ACE /* MatchesDTO.swift */; };
 		2E73CD032A3563BA006C1ACE /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD022A3563BA006C1ACE /* MatchDTO.swift */; };
 		2E73CD052A3563E7006C1ACE /* MetadataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */; };
@@ -48,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E6FBE322A35D504007C2F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688B0D232A341E7200D5F68E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E6FBE2A2A35D504007C2F34;
+			remoteInfo = GGPOIntentHandler;
+		};
 		688B0D812A342E2900D5F68E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 688B0D232A341E7200D5F68E /* Project object */;
@@ -64,6 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2E6FBE342A35D504007C2F34 /* GGPOIntentHandler.appex in Embed Foundation Extensions */,
 				688B0D832A342E2900D5F68E /* WidgetExtentsionExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -80,6 +93,12 @@
 		2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetRecordsView.swift; sourceTree = "<group>"; };
 		2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		2E6FBE202A35C616007C2F34 /* RecentWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetEntryView.swift; sourceTree = "<group>"; };
+		2E6FBE262A35CD58007C2F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2E6FBE2B2A35D504007C2F34 /* GGPOIntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GGPOIntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6FBE2C2A35D504007C2F34 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		2E6FBE2F2A35D504007C2F34 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		2E6FBE312A35D504007C2F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E6FBE382A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DynamicSummonerSelection.intentdefinition; sourceTree = "<group>"; };
 		2E73CD002A356356006C1ACE /* MatchesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDTO.swift; sourceTree = "<group>"; };
 		2E73CD022A3563BA006C1ACE /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
 		2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDTO.swift; sourceTree = "<group>"; };
@@ -111,6 +130,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E6FBE282A35D504007C2F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E6FBE2D2A35D504007C2F34 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		688B0D282A341E7200D5F68E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,6 +178,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2E6FBE2E2A35D504007C2F34 /* GGPOIntentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FBE2F2A35D504007C2F34 /* IntentHandler.swift */,
+				2E6FBE312A35D504007C2F34 /* Info.plist */,
+			);
+			path = GGPOIntentHandler;
+			sourceTree = "<group>";
+		};
 		2E73CD0C2A35AD3A006C1ACE /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +211,7 @@
 			children = (
 				688B0D2D2A341E7200D5F68E /* GGPO */,
 				688B0D772A342E2800D5F68E /* WidgetExtentsion */,
+				2E6FBE2E2A35D504007C2F34 /* GGPOIntentHandler */,
 				688B0D432A341E9D00D5F68E /* Frameworks */,
 				688B0D2C2A341E7200D5F68E /* Products */,
 			);
@@ -185,6 +222,7 @@
 			children = (
 				688B0D2B2A341E7200D5F68E /* GGPO.app */,
 				688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */,
+				2E6FBE2B2A35D504007C2F34 /* GGPOIntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +230,7 @@
 		688B0D2D2A341E7200D5F68E /* GGPO */ = {
 			isa = PBXGroup;
 			children = (
+				2E6FBE262A35CD58007C2F34 /* Info.plist */,
 				688B0D8A2A343CC200D5F68E /* Resource */,
 				688B0D892A343CBE00D5F68E /* View */,
 				688B0D872A343CB100D5F68E /* Model */,
@@ -217,6 +256,7 @@
 			children = (
 				688B0D442A341E9D00D5F68E /* WidgetKit.framework */,
 				688B0D462A341E9D00D5F68E /* SwiftUI.framework */,
+				2E6FBE2C2A35D504007C2F34 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,6 +264,7 @@
 		688B0D772A342E2800D5F68E /* WidgetExtentsion */ = {
 			isa = PBXGroup;
 			children = (
+				2E6FBE382A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition */,
 				2E6FBE092A35C165007C2F34 /* RecentWidget */,
 				688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */,
 				688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */,
@@ -271,6 +312,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2E6FBE2A2A35D504007C2F34 /* GGPOIntentHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E6FBE352A35D504007C2F34 /* Build configuration list for PBXNativeTarget "GGPOIntentHandler" */;
+			buildPhases = (
+				2E6FBE272A35D504007C2F34 /* Sources */,
+				2E6FBE282A35D504007C2F34 /* Frameworks */,
+				2E6FBE292A35D504007C2F34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GGPOIntentHandler;
+			productName = GGPOIntentHandler;
+			productReference = 2E6FBE2B2A35D504007C2F34 /* GGPOIntentHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		688B0D2A2A341E7200D5F68E /* GGPO */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 688B0D3B2A341E7300D5F68E /* Build configuration list for PBXNativeTarget "GGPO" */;
@@ -284,6 +342,7 @@
 			);
 			dependencies = (
 				688B0D822A342E2900D5F68E /* PBXTargetDependency */,
+				2E6FBE332A35D504007C2F34 /* PBXTargetDependency */,
 			);
 			name = GGPO;
 			productName = GGPO;
@@ -317,6 +376,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					2E6FBE2A2A35D504007C2F34 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					688B0D2A2A341E7200D5F68E = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -340,11 +402,19 @@
 			targets = (
 				688B0D2A2A341E7200D5F68E /* GGPO */,
 				688B0D732A342E2800D5F68E /* WidgetExtentsionExtension */,
+				2E6FBE2A2A35D504007C2F34 /* GGPOIntentHandler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2E6FBE292A35D504007C2F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		688B0D292A341E7200D5F68E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +435,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2E6FBE272A35D504007C2F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E6FBE302A35D504007C2F34 /* IntentHandler.swift in Sources */,
+				2E6FBE3A2A35E1D3007C2F34 /* DynamicSummonerSelection.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		688B0D272A341E7200D5F68E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6FBE392A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition in Sources */,
 				2E6FBE222A35C669007C2F34 /* RecentWidgetEntryView.swift in Sources */,
 				688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */,
 				2E6FBE1F2A35C59E007C2F34 /* Date+Extension.swift in Sources */,
@@ -414,6 +494,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2E6FBE332A35D504007C2F34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E6FBE2A2A35D504007C2F34 /* GGPOIntentHandler */;
+			targetProxy = 2E6FBE322A35D504007C2F34 /* PBXContainerItemProxy */;
+		};
 		688B0D822A342E2900D5F68E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 688B0D732A342E2800D5F68E /* WidgetExtentsionExtension */;
@@ -422,6 +507,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2E6FBE362A35D504007C2F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XW996HTK32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GGPOIntentHandler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GGPOIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.GGPOIntentHandler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E6FBE372A35D504007C2F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XW996HTK32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GGPOIntentHandler/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GGPOIntentHandler;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.letusgo-hack.GGPO.GGPOIntentHandler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		688B0D392A341E7300D5F68E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -550,8 +685,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GGPO/Preview Content\"";
+				DEVELOPMENT_TEAM = XW996HTK32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GGPO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -579,8 +716,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GGPO/Preview Content\"";
+				DEVELOPMENT_TEAM = XW996HTK32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GGPO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -606,6 +745,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XW996HTK32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetExtentsion/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetExtentsion;
@@ -632,6 +772,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XW996HTK32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetExtentsion/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetExtentsion;
@@ -654,6 +795,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E6FBE352A35D504007C2F34 /* Build configuration list for PBXNativeTarget "GGPOIntentHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E6FBE362A35D504007C2F34 /* Debug */,
+				2E6FBE372A35D504007C2F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		688B0D262A341E7200D5F68E /* Build configuration list for PBXProject "GGPO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

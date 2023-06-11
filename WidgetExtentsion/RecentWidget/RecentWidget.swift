@@ -12,15 +12,20 @@ struct RecentWidget: Widget {
     let kind: String = "com.letusgo-hack.GGPO.RecentWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: self.kind,
+        IntentConfiguration(kind: self.kind,
+                            intent: DynamicSummonerSelectionIntent.self,
                             provider: RecentWidgetProvider()
         ) { entry in
             RecentWidgetEntryView(entry: entry)
+                .containerBackground(.background.tertiary, for: .widget)
         }
         .contentMarginsDisabled()
         .configurationDisplayName("최근 전적")
         .description("최근 전적과 오늘의 승률을 보여주는 위젯입니다.")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium])
+//        .onBackgroundURLSessionEvents { identifier, completion in
+//            <#code#>
+//        }
     }
 }
 
@@ -30,5 +35,6 @@ struct RecentWidget: Widget {
     RecentWidgetEntry(date: .now,
                       records: [
                         Record(date: .now, isWin: true)
-                      ])
+                      ],
+                      relevance: TimelineEntryRelevance(score: 1.0))
 }
