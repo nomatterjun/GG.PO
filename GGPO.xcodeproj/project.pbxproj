@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E6FBE112A35C2DF007C2F34 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Record.swift */; };
+		2E6FBE122A35C2EA007C2F34 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Record.swift */; };
+		2E6FBE182A35C4FE007C2F34 /* RecentWidgetInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */; };
+		2E6FBE192A35C4FE007C2F34 /* RecentWidgetRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */; };
+		2E6FBE1A2A35C4FE007C2F34 /* RecentWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */; };
+		2E6FBE1B2A35C4FE007C2F34 /* RecentWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE0C2A35C263007C2F34 /* RecentWidgetProvider.swift */; };
+		2E6FBE1C2A35C4FE007C2F34 /* RecentWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE0E2A35C2A7007C2F34 /* RecentWidgetEntry.swift */; };
+		2E6FBE1E2A35C57D007C2F34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */; };
+		2E6FBE1F2A35C59E007C2F34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */; };
+		2E6FBE222A35C669007C2F34 /* RecentWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE202A35C616007C2F34 /* RecentWidgetEntryView.swift */; };
 		2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD002A356356006C1ACE /* MatchesDTO.swift */; };
 		2E73CD032A3563BA006C1ACE /* MatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD022A3563BA006C1ACE /* MatchDTO.swift */; };
 		2E73CD052A3563E7006C1ACE /* MetadataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */; };
@@ -20,8 +30,6 @@
 		2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */; };
 		2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */; };
 		2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */; };
-		68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
-		68760CAF2A34546E00FD9A21 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68760CAD2A34546E00FD9A21 /* Trapezium.swift */; };
 		688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D2E2A341E7200D5F68E /* GGPOApp.swift */; };
 		688B0D312A341E7200D5F68E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D302A341E7200D5F68E /* ContentView.swift */; };
 		688B0D332A341E7300D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D322A341E7300D5F68E /* Assets.xcassets */; };
@@ -31,17 +39,12 @@
 		688B0D762A342E2800D5F68E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688B0D462A341E9D00D5F68E /* SwiftUI.framework */; };
 		688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */; };
 		688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */; };
-		688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */; };
 		688B0D7F2A342E2900D5F68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688B0D7E2A342E2900D5F68E /* Assets.xcassets */; };
 		688B0D832A342E2900D5F68E /* WidgetExtentsionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
 		688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8B2A343CF800D5F68E /* Champion.swift */; };
 		688B0D8F2A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
 		688B0D902A343DD700D5F68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688B0D8E2A343DD700D5F68E /* User.swift */; };
-		68946BF92A3442D00090207F /* VersusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BF82A3442D00090207F /* VersusWidget.swift */; };
-		68946BFA2A3442D00090207F /* VersusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BF82A3442D00090207F /* VersusWidget.swift */; };
-		68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */; };
-		68946BFD2A3445B90090207F /* VersusWidgetSystemLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidget.swift; sourceTree = "<group>"; };
+		2E6FBE0C2A35C263007C2F34 /* RecentWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetProvider.swift; sourceTree = "<group>"; };
+		2E6FBE0E2A35C2A7007C2F34 /* RecentWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetEntry.swift; sourceTree = "<group>"; };
+		2E6FBE102A35C2DF007C2F34 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetInfoView.swift; sourceTree = "<group>"; };
+		2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetRecordsView.swift; sourceTree = "<group>"; };
+		2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2E6FBE202A35C616007C2F34 /* RecentWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetEntryView.swift; sourceTree = "<group>"; };
 		2E73CD002A356356006C1ACE /* MatchesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDTO.swift; sourceTree = "<group>"; };
 		2E73CD022A3563BA006C1ACE /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
 		2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDTO.swift; sourceTree = "<group>"; };
@@ -82,7 +93,6 @@
 		2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VIew+Extension.swift"; sourceTree = "<group>"; };
 		2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2E7F56972A34D25500C1A742 /* GPButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButtonStyle.swift; sourceTree = "<group>"; };
-		68760CAD2A34546E00FD9A21 /* Trapezium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezium.swift; sourceTree = "<group>"; };
 		688B0D2B2A341E7200D5F68E /* GGPO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGPO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D2E2A341E7200D5F68E /* GGPOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGPOApp.swift; sourceTree = "<group>"; };
 		688B0D302A341E7200D5F68E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
@@ -94,13 +104,10 @@
 		688B0D742A342E2800D5F68E /* WidgetExtentsionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtentsionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsionBundle.swift; sourceTree = "<group>"; };
 		688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsionLiveActivity.swift; sourceTree = "<group>"; };
-		688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtentsion.swift; sourceTree = "<group>"; };
 		688B0D7E2A342E2900D5F68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688B0D802A342E2900D5F68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688B0D8B2A343CF800D5F68E /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		688B0D8E2A343DD700D5F68E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		68946BF82A3442D00090207F /* VersusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersusWidget.swift; sourceTree = "<group>"; };
-		68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersusWidgetSystemLargeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +130,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E6FBE092A35C165007C2F34 /* RecentWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FBE132A35C302007C2F34 /* Views */,
+				2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */,
+				2E6FBE0C2A35C263007C2F34 /* RecentWidgetProvider.swift */,
+				2E6FBE0E2A35C2A7007C2F34 /* RecentWidgetEntry.swift */,
+			);
+			path = RecentWidget;
+			sourceTree = "<group>";
+		};
+		2E6FBE132A35C302007C2F34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E6FBE202A35C616007C2F34 /* RecentWidgetEntryView.swift */,
+				2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */,
+				2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2E73CD0C2A35AD3A006C1ACE /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +164,7 @@
 		2E7527B62A34EAC500DBA222 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */,
 				2E7527B72A34EAD800DBA222 /* VIew+Extension.swift */,
 			);
 			path = Utils;
@@ -195,10 +224,9 @@
 		688B0D772A342E2800D5F68E /* WidgetExtentsion */ = {
 			isa = PBXGroup;
 			children = (
-				68946BF72A34429A0090207F /* Vursus */,
+				2E6FBE092A35C165007C2F34 /* RecentWidget */,
 				688B0D782A342E2800D5F68E /* WidgetExtentsionBundle.swift */,
 				688B0D7A2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift */,
-				688B0D7C2A342E2800D5F68E /* WidgetExtentsion.swift */,
 				688B0D7E2A342E2900D5F68E /* Assets.xcassets */,
 				688B0D802A342E2900D5F68E /* Info.plist */,
 			);
@@ -211,6 +239,7 @@
 				688B0D8B2A343CF800D5F68E /* Champion.swift */,
 				688B0D8E2A343DD700D5F68E /* User.swift */,
 				2E7F56952A34C9D200C1A742 /* ContentViewModel.swift */,
+				2E6FBE102A35C2DF007C2F34 /* Record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,24 +266,6 @@
 				688B0D2E2A341E7200D5F68E /* GGPOApp.swift */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		68946BF72A34429A0090207F /* Vursus */ = {
-			isa = PBXGroup;
-			children = (
-				68946BFE2A3445BD0090207F /* view */,
-				68946BF82A3442D00090207F /* VersusWidget.swift */,
-			);
-			path = Vursus;
-			sourceTree = "<group>";
-		};
-		68946BFE2A3445BD0090207F /* view */ = {
-			isa = PBXGroup;
-			children = (
-				68946BFB2A3445B80090207F /* VersusWidgetSystemLargeView.swift */,
-				68760CAD2A34546E00FD9A21 /* Trapezium.swift */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,27 +369,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6FBE1E2A35C57D007C2F34 /* Date+Extension.swift in Sources */,
 				688B0D8C2A343CF800D5F68E /* Champion.swift in Sources */,
 				2E73CD0E2A35AD51006C1ACE /* URLSessionService.swift in Sources */,
 				2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */,
 				2E73CD0B2A3565BE006C1ACE /* TeamDTO.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
+				2E6FBE112A35C2DF007C2F34 /* Record.swift in Sources */,
 				2E73CD092A356584006C1ACE /* ParticipantDTO.swift in Sources */,
-				68946BFC2A3445B80090207F /* VersusWidgetSystemLargeView.swift in Sources */,
 				688B0D382A341E7300D5F68E /* Item.swift in Sources */,
 				2E73CD102A35ADB3006C1ACE /* MatchPaths.swift in Sources */,
 				2E73CD052A3563E7006C1ACE /* MetadataDTO.swift in Sources */,
 				2E7527B52A34D9F000DBA222 /* GPTextField.swift in Sources */,
 				688B0D8F2A343DD700D5F68E /* User.swift in Sources */,
 				2E7F56962A34C9D200C1A742 /* ContentViewModel.swift in Sources */,
-				68760CAE2A34546E00FD9A21 /* Trapezium.swift in Sources */,
 				2E73CD032A3563BA006C1ACE /* MatchDTO.swift in Sources */,
 				2E73CD122A35AFD8006C1ACE /* URLSessionError.swift in Sources */,
 				2E73CD072A356420006C1ACE /* InfoDTO.swift in Sources */,
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
 				2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */,
 				2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */,
-				68946BF92A3442D00090207F /* VersusWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,14 +396,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6FBE222A35C669007C2F34 /* RecentWidgetEntryView.swift in Sources */,
 				688B0D8D2A343CF800D5F68E /* Champion.swift in Sources */,
+				2E6FBE1F2A35C59E007C2F34 /* Date+Extension.swift in Sources */,
+				2E6FBE1A2A35C4FE007C2F34 /* RecentWidget.swift in Sources */,
 				688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */,
-				68946BFD2A3445B90090207F /* VersusWidgetSystemLargeView.swift in Sources */,
-				688B0D7D2A342E2800D5F68E /* WidgetExtentsion.swift in Sources */,
+				2E6FBE192A35C4FE007C2F34 /* RecentWidgetRecordsView.swift in Sources */,
+				2E6FBE122A35C2EA007C2F34 /* Record.swift in Sources */,
+				2E6FBE182A35C4FE007C2F34 /* RecentWidgetInfoView.swift in Sources */,
 				688B0D902A343DD700D5F68E /* User.swift in Sources */,
-				68760CAF2A34546E00FD9A21 /* Trapezium.swift in Sources */,
 				688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */,
-				68946BFA2A3442D00090207F /* VersusWidget.swift in Sources */,
+				2E6FBE1C2A35C4FE007C2F34 /* RecentWidgetEntry.swift in Sources */,
+				2E6FBE1B2A35C4FE007C2F34 /* RecentWidgetProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
