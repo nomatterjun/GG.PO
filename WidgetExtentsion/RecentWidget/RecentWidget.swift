@@ -22,7 +22,7 @@ struct RecentWidget: Widget {
         .contentMarginsDisabled()
         .configurationDisplayName("최근 전적")
         .description("최근 전적과 오늘의 승률을 보여주는 위젯입니다.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemMedium])
 //        .onBackgroundURLSessionEvents { identifier, completion in
 //            <#code#>
 //        }
@@ -33,8 +33,8 @@ struct RecentWidget: Widget {
     RecentWidget()
 } timeline: {
     RecentWidgetEntry(date: .now,
-                      records: [
-                        Record(date: .now, isWin: true)
+                      matches: [
+
                       ],
                       relevance: TimelineEntryRelevance(score: 1.0))
 }

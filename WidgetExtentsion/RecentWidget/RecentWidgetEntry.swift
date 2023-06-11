@@ -9,6 +9,6 @@ import WidgetKit
 
 struct RecentWidgetEntry: TimelineEntry {
     let date: Date
-    let records: [Record]
+    let matches: [Match]
     let relevance: TimelineEntryRelevance?
 }

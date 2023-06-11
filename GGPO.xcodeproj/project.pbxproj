@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E41FD0C2A361CE000F10A4A /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E41FD0B2A361CE000F10A4A /* ErrorDTO.swift */; };
-		2E6FBE112A35C2DF007C2F34 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Record.swift */; };
-		2E6FBE122A35C2EA007C2F34 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Record.swift */; };
+		2E6FBE112A35C2DF007C2F34 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Match.swift */; };
+		2E6FBE122A35C2EA007C2F34 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Match.swift */; };
 		2E6FBE182A35C4FE007C2F34 /* RecentWidgetInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */; };
 		2E6FBE192A35C4FE007C2F34 /* RecentWidgetRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */; };
 		2E6FBE1A2A35C4FE007C2F34 /* RecentWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */; };
@@ -86,7 +86,7 @@
 		2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidget.swift; sourceTree = "<group>"; };
 		2E6FBE0C2A35C263007C2F34 /* RecentWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetProvider.swift; sourceTree = "<group>"; };
 		2E6FBE0E2A35C2A7007C2F34 /* RecentWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetEntry.swift; sourceTree = "<group>"; };
-		2E6FBE102A35C2DF007C2F34 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		2E6FBE102A35C2DF007C2F34 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetInfoView.swift; sourceTree = "<group>"; };
 		2E6FBE162A35C339007C2F34 /* RecentWidgetRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetRecordsView.swift; sourceTree = "<group>"; };
 		2E6FBE1D2A35C57D007C2F34 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 			children = (
 				2E6FBE402A35FD01007C2F34 /* Storable.swift */,
 				2E6FBE3D2A35F9B1007C2F34 /* Response */,
-				2E6FBE102A35C2DF007C2F34 /* Record.swift */,
+				2E6FBE102A35C2DF007C2F34 /* Match.swift */,
 				2E6FBE3B2A35F8CF007C2F34 /* Summoner.swift */,
 			);
 			path = Model;
@@ -455,7 +455,7 @@
 				2E73CD0E2A35AD51006C1ACE /* URLSessionService.swift in Sources */,
 				2E73CD012A356356006C1ACE /* MatchesDTO.swift in Sources */,
 				688B0D312A341E7200D5F68E /* ContentView.swift in Sources */,
-				2E6FBE112A35C2DF007C2F34 /* Record.swift in Sources */,
+				2E6FBE112A35C2DF007C2F34 /* Match.swift in Sources */,
 				2E73CD092A356584006C1ACE /* ParticipantDTO.swift in Sources */,
 				2E6FBE3F2A35F9C5007C2F34 /* SummonerDTO.swift in Sources */,
 				2E73CD102A35ADB3006C1ACE /* URLSessionPaths.swift in Sources */,
@@ -483,7 +483,7 @@
 				2E6FBE1A2A35C4FE007C2F34 /* RecentWidget.swift in Sources */,
 				688B0D792A342E2800D5F68E /* WidgetExtentsionBundle.swift in Sources */,
 				2E6FBE192A35C4FE007C2F34 /* RecentWidgetRecordsView.swift in Sources */,
-				2E6FBE122A35C2EA007C2F34 /* Record.swift in Sources */,
+				2E6FBE122A35C2EA007C2F34 /* Match.swift in Sources */,
 				2E6FBE182A35C4FE007C2F34 /* RecentWidgetInfoView.swift in Sources */,
 				688B0D7B2A342E2800D5F68E /* WidgetExtentsionLiveActivity.swift in Sources */,
 				2E6FBE1C2A35C4FE007C2F34 /* RecentWidgetEntry.swift in Sources */,

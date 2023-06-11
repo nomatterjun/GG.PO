@@ -20,7 +20,7 @@ struct RecentWidgetRecordsView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 6) {
-            ForEach(entry.records, id: \.id) { i in
+            ForEach(entry.matches, id: \.id) { i in
                 RoundedRectangle(cornerRadius: 4)
                     .fill(i.isWin ? .blue : .red)
                     .frame(height: 32)
@@ -31,6 +31,6 @@ struct RecentWidgetRecordsView: View {
 
 #Preview {
     RecentWidgetRecordsView(entry: RecentWidgetEntry(date: .now,
-                                                     records: [Record(date: .now, isWin: true)],
+                                                     matches: [Match(date: .now, isWin: true)],
                                                      relevance: TimelineEntryRelevance(score: 1.0)))
 }

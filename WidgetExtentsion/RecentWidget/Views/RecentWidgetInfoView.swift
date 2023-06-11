@@ -17,7 +17,7 @@ struct RecentWidgetInfoView: View {
                 Text("오늘 승률")
                     .font(.system(size: 16, weight: .bold))
 
-                let todayRecords = self.entry.records.filter { $0.date.isToday }
+                let todayRecords = self.entry.matches.filter { $0.date.isToday }
                 let wonTodayRecords = todayRecords.filter { $0.isWin }
                 let winRate = round(Double(wonTodayRecords.count) / Double(todayRecords.count) * 100)
                 Text(String(Int(winRate)) + "%")
@@ -38,6 +38,6 @@ struct RecentWidgetInfoView: View {
 
 #Preview {
     RecentWidgetInfoView(entry: RecentWidgetEntry(date: .now,
-                                                  records: [Record(date: .now, isWin: true)],
+                                                  matches: [Match(date: .now, isWin: true)],
                                                   relevance: TimelineEntryRelevance(score: 1.0)))
 }

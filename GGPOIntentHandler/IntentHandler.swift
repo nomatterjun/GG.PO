@@ -13,11 +13,10 @@ class IntentHandler: INExtension, DynamicSummonerSelectionIntentHandling {
                                           with completion: @escaping (INObjectCollection<Summoner>?, Error?) -> Void
     ) {
         // Get available summoner list.
-        let summoners: [Summoner] = []
+        let summoners: [Summoner] = [Summoner(identifier: "Hide on bush", display: "Faker")]
 
         // Init Collection with summoners
         let collection = INObjectCollection(items: summoners)
-
         completion(collection, nil)
     }
 
