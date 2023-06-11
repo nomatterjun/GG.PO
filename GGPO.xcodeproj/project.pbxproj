@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E41FD0C2A361CE000F10A4A /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E41FD0B2A361CE000F10A4A /* ErrorDTO.swift */; };
+		2E41FD152A362C5900F10A4A /* DynamicSummonerSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE382A35D544007C2F34 /* DynamicSummonerSelection.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		2E6FBE112A35C2DF007C2F34 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Match.swift */; };
 		2E6FBE122A35C2EA007C2F34 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE102A35C2DF007C2F34 /* Match.swift */; };
 		2E6FBE182A35C4FE007C2F34 /* RecentWidgetInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6FBE142A35C30E007C2F34 /* RecentWidgetInfoView.swift */; };
@@ -83,6 +84,9 @@
 
 /* Begin PBXFileReference section */
 		2E41FD0B2A361CE000F10A4A /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
+		2E41FD122A36286D00F10A4A /* GGPO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GGPO.entitlements; sourceTree = "<group>"; };
+		2E41FD132A3628AE00F10A4A /* WidgetExtentsionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtentsionExtension.entitlements; sourceTree = "<group>"; };
+		2E41FD142A3628B700F10A4A /* GGPOIntentHandler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GGPOIntentHandler.entitlements; sourceTree = "<group>"; };
 		2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidget.swift; sourceTree = "<group>"; };
 		2E6FBE0C2A35C263007C2F34 /* RecentWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetProvider.swift; sourceTree = "<group>"; };
 		2E6FBE0E2A35C2A7007C2F34 /* RecentWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentWidgetEntry.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		2E6FBE2E2A35D504007C2F34 /* GGPOIntentHandler */ = {
 			isa = PBXGroup;
 			children = (
+				2E41FD142A3628B700F10A4A /* GGPOIntentHandler.entitlements */,
 				2E6FBE2F2A35D504007C2F34 /* IntentHandler.swift */,
 				2E6FBE312A35D504007C2F34 /* Info.plist */,
 			);
@@ -219,6 +224,7 @@
 		688B0D222A341E7200D5F68E = {
 			isa = PBXGroup;
 			children = (
+				2E41FD132A3628AE00F10A4A /* WidgetExtentsionExtension.entitlements */,
 				688B0D2D2A341E7200D5F68E /* GGPO */,
 				688B0D772A342E2800D5F68E /* WidgetExtentsion */,
 				2E6FBE2E2A35D504007C2F34 /* GGPOIntentHandler */,
@@ -240,6 +246,7 @@
 		688B0D2D2A341E7200D5F68E /* GGPO */ = {
 			isa = PBXGroup;
 			children = (
+				2E41FD122A36286D00F10A4A /* GGPO.entitlements */,
 				2E6FBE262A35CD58007C2F34 /* Info.plist */,
 				688B0D8A2A343CC200D5F68E /* Resource */,
 				688B0D892A343CBE00D5F68E /* View */,
@@ -470,6 +477,7 @@
 				688B0D2F2A341E7200D5F68E /* GGPOApp.swift in Sources */,
 				2E7F56982A34D25500C1A742 /* GPButtonStyle.swift in Sources */,
 				2E7527B82A34EAD800DBA222 /* VIew+Extension.swift in Sources */,
+				2E41FD152A362C5900F10A4A /* DynamicSummonerSelection.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +518,7 @@
 		2E6FBE362A35D504007C2F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GGPOIntentHandler/GGPOIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;
@@ -535,6 +544,7 @@
 		2E6FBE372A35D504007C2F34 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GGPOIntentHandler/GGPOIntentHandler.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;
@@ -682,6 +692,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GGPO/GGPO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GGPO/Preview Content\"";
@@ -713,6 +724,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GGPO/GGPO.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GGPO/Preview Content\"";
@@ -743,6 +755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetExtentsionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;
@@ -770,6 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetExtentsionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;

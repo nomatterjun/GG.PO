@@ -9,7 +9,8 @@ import SwiftUI
 import WidgetKit
 
 struct RecentWidgetRecordsView: View {
-    var entry: RecentWidgetProvider.Entry
+    @State var matches: [Match]
+
     let columns: [GridItem] = [
         GridItem(.flexible(minimum: 32), spacing: 8),
         GridItem(.flexible(minimum: 32), spacing: 8),
@@ -20,7 +21,7 @@ struct RecentWidgetRecordsView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 6) {
-            ForEach(entry.matches, id: \.id) { i in
+            ForEach(self.matches, id: \.id) { i in
                 RoundedRectangle(cornerRadius: 4)
                     .fill(i.isWin ? .blue : .red)
                     .frame(height: 32)
@@ -30,7 +31,5 @@ struct RecentWidgetRecordsView: View {
 }
 
 #Preview {
-    RecentWidgetRecordsView(entry: RecentWidgetEntry(date: .now,
-                                                     matches: [Match(date: .now, isWin: true)],
-                                                     relevance: TimelineEntryRelevance(score: 1.0)))
+    RecentWidgetRecordsView(matches: [Match(date: .now, isWin: true)])
 }

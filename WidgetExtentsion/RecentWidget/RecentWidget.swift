@@ -34,7 +34,8 @@ struct RecentWidget: Widget {
 } timeline: {
     RecentWidgetEntry(date: .now,
                       matches: [
-
+                        Match(date: .now, isWin: true),
+                        Match(date: .now, isWin: true)
                       ],
                       relevance: TimelineEntryRelevance(score: 1.0))
 }

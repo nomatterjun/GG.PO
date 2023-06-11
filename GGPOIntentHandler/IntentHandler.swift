@@ -9,19 +9,18 @@ import Intents
 
 class IntentHandler: INExtension, DynamicSummonerSelectionIntentHandling {
 
-    func provideSummonerOptionsCollection(for intent: DynamicSummonerSelectionIntent,
-                                          with completion: @escaping (INObjectCollection<Summoner>?, Error?) -> Void
-    ) {
+    func provideSummonerOptionsCollection(
+        for intent: DynamicSummonerSelectionIntent
+    ) async throws -> INObjectCollection<Summoner> {
         // Get available summoner list.
-        let summoners: [Summoner] = [Summoner(identifier: "Hide on bush", display: "Faker")]
-
+        let summoners: [Summoner] = [
+            Summoner(identifier: "Hide on bush", display: "Faker"),
+            Summoner(identifier: "sdfklj", display: "Zeus")
+        ]
+        
         // Init Collection with summoners
         let collection = INObjectCollection(items: summoners)
-        completion(collection, nil)
-    }
-
-    override func handler(for intent: INIntent) -> Any? {
-        return self
+        return collection
     }
     
 }

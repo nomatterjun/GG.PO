@@ -34,6 +34,8 @@
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Summoner</string>
 					<key>INIntentParameterDisplayNameID</key>
@@ -46,6 +48,8 @@
 					<string>Summoner</string>
 					<key>INIntentParameterObjectTypeNamespace</key>
 					<string>UCwKV8</string>
+					<key>INIntentParameterSupportsDynamicEnumeration</key>
+					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>
 					<key>INIntentParameterType</key>

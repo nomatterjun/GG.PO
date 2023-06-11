@@ -17,8 +17,8 @@ struct RecentWidgetEntryView: View {
         switch self.family {
         case .systemMedium:
             HStack(alignment: .top, spacing: 24) {
-                RecentWidgetInfoView(entry: self.entry)
-                RecentWidgetRecordsView(entry: self.entry)
+                RecentWidgetInfoView(matches: self.entry.matches)
+                RecentWidgetRecordsView(matches: self.entry.matches)
             }
         default:
             Text("sdf")
