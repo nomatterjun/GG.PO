@@ -23,6 +23,8 @@ public class URLSessionService {
             throw URLSessionError.invalidURL
         }
 
+        print(url)
+
         let (data, _) = try await URLSession.shared.data(from: url)
         do {
             let responseDTO = try JSONDecoder().decode(SummonerDTO.self, from: data)
@@ -38,12 +40,14 @@ public class URLSessionService {
     func fetchRecentMatches(by pUUID: String) async throws -> [String] {
         let urlComponents = self.buildURLComponents(.region,
                                                     path: .matchesByPUUID(pUUID: pUUID),
-                                                    queryItems: URLQueryItem(name: "count", value: "50"),
+                                                    queryItems: URLQueryItem(name: "count", value: "20"),
                                                                 URLQueryItem(name: "api_key", value: URLSessionService.apiKey))
 
         guard let url = urlComponents.url else {
             throw URLSessionError.invalidURL
         }
+
+        print(url)
 
         let (data, _) = try await URLSession.shared.data(from: url)
         let matches = try JSONDecoder().decode([String].self, from: data)
@@ -51,7 +55,7 @@ public class URLSessionService {
     }
 
     /// 게임 ID를 사용해 게임에 대한 자세한 정보를 조회합니다.
-    func fetchMatch(_ matchID: String) async throws {
+    func fetchMatch(_ matchID: String) async throws -> Match {
         let urlComponents = self.buildURLComponents(.region,
                                                     path: .match(matchID: matchID),
                                                     queryItems: URLQueryItem(name: "api_key", value: URLSessionService.apiKey))
@@ -60,9 +64,11 @@ public class URLSessionService {
             throw URLSessionError.invalidURL
         }
 
+        print(url)
+
         let (data, _) = try await URLSession.shared.data(from: url)
         let responseDTO = try JSONDecoder().decode(MatchDTO.self, from: data)
-        print(responseDTO.info)
+        return Match(dto: responseDTO)
     }
 }
 

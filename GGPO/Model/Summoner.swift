@@ -71,7 +71,24 @@ extension Summoner: Hashable {
 }
 
 extension Summoner {
-    public static let container = try! ModelContainer(for: Summoner.self)
+    public static let container = try! ModelContainer(for: schema, configurations: [.init(inMemory: false), .init(sharedAppContainerIdentifier: "group.letusgo-hack.GGPO")])
+
+    static let schema = Schema([
+        Summoner.self,
+        Match.self
+    ])
+
+    public static func instance(with modelContext: ModelContext) -> Summoner {
+        if let result = try! modelContext.fetch(FetchDescriptor<Summoner>()).first {
+            return result
+        } else {
+            return Summoner.random()
+        }
+    }
+
+    public static func generateData(modelContext: ModelContext) {
+        let instance = instance(with: modelContext)
+    }
 }
 
 extension Summoner {

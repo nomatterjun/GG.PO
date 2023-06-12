@@ -86,7 +86,6 @@
 /* Begin PBXFileReference section */
 		2E41FD0B2A361CE000F10A4A /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
 		2E41FD122A36286D00F10A4A /* GGPO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GGPO.entitlements; sourceTree = "<group>"; };
-		2E41FD132A3628AE00F10A4A /* WidgetExtentsionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtentsionExtension.entitlements; sourceTree = "<group>"; };
 		2E41FD162A36DC8A00F10A4A /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		2E41FD192A36DE3A00F10A4A /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		2E41FD1C2A36DEF000F10A4A /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		2E6FBE3B2A35F8CF007C2F34 /* Summoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summoner.swift; sourceTree = "<group>"; };
 		2E6FBE3E2A35F9C5007C2F34 /* SummonerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerDTO.swift; sourceTree = "<group>"; };
 		2E6FBE402A35FD01007C2F34 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		2E705FF72A37714F00CA56E2 /* RecentWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecentWidgetExtension.entitlements; sourceTree = "<group>"; };
 		2E73CD002A356356006C1ACE /* MatchesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDTO.swift; sourceTree = "<group>"; };
 		2E73CD022A3563BA006C1ACE /* MatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDTO.swift; sourceTree = "<group>"; };
 		2E73CD042A3563E6006C1ACE /* MetadataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDTO.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 		2E43831A2A37186C00F03F25 /* RecentWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2E705FF72A37714F00CA56E2 /* RecentWidgetExtension.entitlements */,
 				2E43831B2A37186C00F03F25 /* RecentWidgetBundle.swift */,
 				2E6FBE132A35C302007C2F34 /* Views */,
 				2E6FBE0A2A35C176007C2F34 /* RecentWidget.swift */,
@@ -207,7 +208,6 @@
 		688B0D222A341E7200D5F68E = {
 			isa = PBXGroup;
 			children = (
-				2E41FD132A3628AE00F10A4A /* WidgetExtentsionExtension.entitlements */,
 				688B0D2D2A341E7200D5F68E /* GGPO */,
 				2E43831A2A37186C00F03F25 /* RecentWidget */,
 				688B0D432A341E9D00D5F68E /* Frameworks */,
@@ -449,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RecentWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;
@@ -476,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = RecentWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XW996HTK32;

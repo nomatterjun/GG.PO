@@ -15,6 +15,14 @@ final class Participant {
     var teamPosition: String
     var isWin: Bool
     @Attribute(.unique) var puuid: String
+
+    init(dto: ParticipantDTO) {
+        self.individualPosition = dto.individualPosition
+        self.lane = dto.lane
+        self.teamPosition = dto.teamPosition
+        self.isWin = dto.isWin
+        self.puuid = dto.puuid
+    }
 }
 
 extension Participant: Hashable {

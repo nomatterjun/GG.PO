@@ -16,8 +16,8 @@ struct RecentWidgetIntent: WidgetConfigurationIntent {
     static let title: LocalizedStringResource = "최근 전적"
     static let description = IntentDescription("최근 전적과 오늘의 승률을 보여주는 위젯입니다.")
 
-    @Parameter(title: "Summoner")
-    var summoner: SummonerEntity
+    @Parameter(title: "소환사")
+    var summoner: SummonerEntity?
 
     init(summoner: SummonerEntity) {
         self.summoner = summoner
@@ -48,16 +48,27 @@ struct SummonerEntity: AppEntity, Identifiable, Hashable {
     static var defaultQuery = SummonerEntityQuery()
 }
 
-struct SummonerEntityQuery: EntityQuery, Sendable {
+struct SummonerEntityQuery: EntityQuery {
     func entities(for identifiers: [SummonerEntity.ID]) async throws -> [SummonerEntity] {
+        logger.info("Loading summoners for identifiers: \(identifiers)")
         let modelContext = ModelContext(Summoner.container)
         let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
+        logger.info("Found \(summoners.count) summoners")
         return summoners.map { SummonerEntity(from: $0) }
     }
-
+//    func entities(for identifiers: [SummonerEntity.ID]) async throws -> [SummonerEntity] {
+//        logger.info("Loading summoners for identifiers: \(identifiers)")
+//        let modelContext = ModelContext(Summoner.container)
+//        let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
+//        logger.info("Found \(summoners.count) summoners")
+//        return summoners.map { SummonerEntity(from: $0) }
+//    }
+//
     func suggestedEntities() async throws -> [SummonerEntity] {
+        logger.info("Loading summoners..")
         let modelContext = ModelContext(Summoner.container)
         let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
+        logger.info("Found \(summoners.count) summoners")
         return summoners.map { SummonerEntity(from: $0) }
     }
 }

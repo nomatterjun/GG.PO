@@ -22,7 +22,7 @@ struct RecentWidget: Widget {
                                provider: RecentWidgetProvider()
         ) { entry in
             RecentWidgetEntryView(entry: entry)
-                .modelContainer(for: [Summoner.self, Match.self])
+                .modelContainer(Summoner.container)
         }
         .contentMarginsDisabled()
         .configurationDisplayName("최근 전적")

@@ -15,12 +15,15 @@ struct RecentWidgetEntryView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 24) {
             let summoner = self.entry.configuration.summoner
-            if let selectedSummoner = summoners.first(where: { $0.puuid == summoner.id }) {
+            if let selectedSummoner = summoners.first(where: { $0.puuid == summoner!.id }) {
                 RecentWidgetInfoView(matches: selectedSummoner.matches)
                 RecentWidgetRecordsView(matches: selectedSummoner.matches)
             } else {
                 Text("No Summoner!")
             }
+        }
+        .onAppear {
+            print(summoners)
         }
         .containerBackground(.tertiary, for: .widget)
     }

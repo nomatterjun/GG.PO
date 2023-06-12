@@ -67,6 +67,23 @@ final class Match {
     func participant(for puuid: String) -> Participant {
         return self.participants.first(where: { $0.puuid == puuid })!
     }
+
+    init(dto: MatchDTO) {
+        self.gameCreation = dto.info.gameCreation
+        self.gameDuration = dto.info.gameDuration
+        self.gameEndTimestamp = dto.info.gameEndTimestamp
+        self.gameID = dto.info.gameID
+        self.gameMode = dto.info.gameMode
+        self.gameName = dto.info.gameName
+        self.gameStartTimestamp = dto.info.gameStartTimestamp
+        self.gameType = dto.info.gameType
+        self.gameVersion = dto.info.gameVersion
+        self.mapID = dto.info.mapID
+        self.participants = dto.info.participants.map { Participant(dto: $0) }
+        self.platformID = dto.info.platformID
+        self.queueID = dto.info.queueID
+        self.tournamentCode = dto.info.tournamentCode
+    }
 }
 
 extension Match: Identifiable { }

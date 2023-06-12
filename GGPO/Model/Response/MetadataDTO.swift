@@ -14,7 +14,7 @@ struct MetadataDTO: Decodable, DataTransferObject {
 
     enum CodingKeys: String, CodingKey {
         case dataVersion
-        case matchID
+        case matchID = "matchId"
         case participants
     }
 }

@@ -13,8 +13,11 @@ import OSLog
 private let logger = Logger(subsystem: "WidgetExtension", category: "RecentWidgetProvider")
 
 struct RecentWidgetProvider: AppIntentTimelineProvider {
-
     let modelContext = ModelContext(Summoner.container)
+
+    init() {
+        Summoner.generateData(modelContext: modelContext)
+    }
 
     func placeholder(in context: Context) -> RecentWidgetEntry {
         if let summoner = try? modelContext.fetch(FetchDescriptor<Summoner>()).first {
@@ -31,8 +34,6 @@ struct RecentWidgetProvider: AppIntentTimelineProvider {
     }
 
     func timeline(for configuration: RecentWidgetIntent, in context: Context) async -> Timeline<RecentWidgetEntry> {
-        let matches = self.matches(for: configuration)
-
         let fiveMinutes: TimeInterval = 60 * 5
         var currentDate: Date = .now
 
@@ -54,7 +55,7 @@ struct RecentWidgetProvider: AppIntentTimelineProvider {
 
 private extension RecentWidgetProvider {
     func matches(for configuration: RecentWidgetIntent) -> [Match] {
-        let puuid = configuration.summoner.id
+        let puuid = configuration.summoner!.id
         if let summoner = try! self.modelContext.fetch(
             FetchDescriptor<Summoner>(predicate: #Predicate { $0.puuid == puuid })
         ).first {
