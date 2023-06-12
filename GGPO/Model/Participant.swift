@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class Participant {
+    let id: UUID
     var individualPosition: String
     var lane: String
     var teamPosition: String
@@ -24,6 +25,8 @@ final class Participant {
         self.puuid = dto.puuid
     }
 }
+
+extension Participant: Identifiable { }
 
 extension Participant: Hashable {
     static func == (lhs: Participant, rhs: Participant) -> Bool {

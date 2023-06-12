@@ -25,7 +25,7 @@ struct RecentWidgetProvider: AppIntentTimelineProvider {
                               configuration: RecentWidgetIntent(summoner: SummonerEntity(from: summoner)))
         } else {
             RecentWidgetEntry(date: .now,
-                              configuration: RecentWidgetIntent(summoner: SummonerEntity(id: "1q2w", name: "Hide on bush")))
+                              configuration: RecentWidgetIntent(summoner: SummonerEntity(id: UUID(), puuid: "1q2w", name: "Hide on bush")))
         }
     }
 
@@ -50,17 +50,5 @@ struct RecentWidgetProvider: AppIntentTimelineProvider {
         }
         
         return Timeline(entries: entries, policy: .atEnd)
-    }
-}
-
-private extension RecentWidgetProvider {
-    func matches(for configuration: RecentWidgetIntent) -> [Match] {
-        let puuid = configuration.summoner!.id
-        if let summoner = try! self.modelContext.fetch(
-            FetchDescriptor<Summoner>(predicate: #Predicate { $0.puuid == puuid })
-        ).first {
-            return summoner.matches
-        }
-        return []
     }
 }

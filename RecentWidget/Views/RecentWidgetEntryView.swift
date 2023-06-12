@@ -15,16 +15,15 @@ struct RecentWidgetEntryView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 24) {
             let summoner = self.entry.configuration.summoner
-            if let selectedSummoner = summoners.first(where: { $0.puuid == summoner!.id }) {
+            if let selectedSummoner = summoners.first(where: { $0.puuid == summoner.puuid }) {
+                let _ = print(selectedSummoner.matches.map { $0.date })
                 RecentWidgetInfoView(matches: selectedSummoner.matches)
                 RecentWidgetRecordsView(matches: selectedSummoner.matches)
             } else {
-                Text("No Summoner!")
+                Text("등록된 소환사 정보가 없습니다.")
+                    .foregroundStyle(.gray)
             }
         }
-        .onAppear {
-            print(summoners)
-        }
-        .containerBackground(.tertiary, for: .widget)
+        .containerBackground(.white, for: .widget)
     }
 }

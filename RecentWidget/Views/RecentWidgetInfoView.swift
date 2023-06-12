@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct RecentWidgetInfoView: View {
-    @State var matches: [Match]
+    var matches: [Match]
 
     var body: some View {
         VStack(alignment: .center, spacing: 12) {
@@ -17,10 +17,10 @@ struct RecentWidgetInfoView: View {
                 Text("오늘 승률")
                     .font(.system(size: 16, weight: .bold))
 
-                let todayRecords = self.matches.filter { $0.date.isToday }
-                if todayRecords.count != 0 {
-                    let wonTodayRecords = todayRecords.filter { $0.isWin }
-                    let winRate = round(Double(wonTodayRecords.count) / Double(todayRecords.count) * 100)
+//                let todayRecords = self.matches.filter { $0.date.isToday }
+                if matches.count != 0 {
+                    let wonTodayRecords = matches.filter { $0.isWin }
+                    let winRate = round(Double(wonTodayRecords.count) / Double(matches.count) * 100)
                     Text(String(Int(winRate)) + "%")
                         .font(.system(size: 32, weight: .bold))
                 } else {
@@ -30,7 +30,7 @@ struct RecentWidgetInfoView: View {
             }
 
             Button(action: {
-                print("Button Tapped")
+                print(self.matches)
             }, label: {
                 Image(systemName: "arrow.clockwise.circle.fill")
                     .font(.system(size: 32))

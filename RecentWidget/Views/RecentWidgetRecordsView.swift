@@ -9,7 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct RecentWidgetRecordsView: View {
-    @State var matches: [Match]
+    var matches: [Match]
 
     let columns: [GridItem] = [
         GridItem(.flexible(minimum: 32), spacing: 8),
@@ -21,9 +21,9 @@ struct RecentWidgetRecordsView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 6) {
-            ForEach(self.matches, id: \.id) { i in
+            ForEach(self.matches.prefix(15), id: \.id) { match in
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(i.isWin ? .blue : .red)
+                    .fill(match.isWin ? .blue : .red)
                     .frame(height: 32)
             }
         }

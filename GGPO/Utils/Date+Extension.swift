@@ -9,7 +9,8 @@ import Foundation
 
 extension Date {
     public var isToday: Bool {
-        let calendar = Calendar.current
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(identifier: "ko_kr")!
         let todayComponents = calendar.dateComponents([.year, .month, .day], from: Date())
         let today = calendar.date(from: todayComponents)!
         return calendar.isDate(self, inSameDayAs: today)

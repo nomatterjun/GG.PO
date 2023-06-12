@@ -19,6 +19,8 @@ struct ContentView: View {
     @State private var text: String = ""
     @State private var tapped: Bool = false
 
+    @State private var networkDone: Bool = false
+
     var body: some View {
         VStack {
             VStack(spacing: 4) {
@@ -33,6 +35,14 @@ struct ContentView: View {
             Spacer()
 
             VStack(spacing: 24) {
+                if $networkDone.wrappedValue {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(.green)
+                        .animation(.bouncy, value: true)
+                } else {
+                    Image(systemName: "circle.dotted")
+                }
+
                 GPTextField(text: self.$text)
                     .focused(self.$isFocused)
 
@@ -41,14 +51,17 @@ struct ContentView: View {
                     Task {
                         do {
                             let summoner = try await self.urlSession.fetchSummoner(by: self.text)
-                            modelContext.insert(summoner)
                             let matchIDs = try await self.urlSession.fetchRecentMatches(by: summoner.puuid)
                             for matchID in matchIDs {
                                 let match = try await self.urlSession.fetchMatch(matchID)
+                                print(match.date)
                                 modelContext.insert(match)
+                                summoner.matches.append(match)
                             }
-                            let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
-                            print(summoners.map { $0.name })
+                            print(summoner.matches.map { $0.date })
+                            modelContext.insert(summoner)
+                            try? modelContext.save()
+                            networkDone = true
                         } catch {
                             print(error)
                         }
@@ -63,7 +76,7 @@ struct ContentView: View {
         .padding(.horizontal)
         .onAppear {
             self.isFocused = true
-            print(try! ModelContext(Summoner.container).fetch(FetchDescriptor<Summoner>()).map { $0.name })
+            modelContext.autosaveEnabled = true
         }
         .onTapGesture {
             self.isFocused = false

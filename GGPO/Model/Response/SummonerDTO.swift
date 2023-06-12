@@ -12,13 +12,15 @@ struct SummonerDTO: Decodable, DataTransferObject {
     let profileIconID: Int
     let revisionDate: Int
     let name: String
-    let id: String
+    let summonerID: String
     let puuid: String
     let summonerLevel: Int
 
     enum CodingKeys: String, CodingKey {
         case accountID = "accountId"
         case profileIconID = "profileIconId"
-        case revisionDate, name, id, puuid, summonerLevel
+        case revisionDate, name
+        case summonerID = "id"
+        case puuid, summonerLevel
     }
 }

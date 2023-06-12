@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class Match {
+    let id = UUID()
     /// Unix timestamp for when the game is created on the game server (i.e., the loading screen).
     var gameCreation: Int
     /// This field returns the game length in milliseconds calculated from gameEndTimestamp - gameStartTimestamp.
@@ -55,8 +56,7 @@ final class Match {
 
     @Transient
     var date: Date {
-        let unixTime = Double(self.gameCreation) 
-        return Date(timeIntervalSince1970: unixTime)
+        return Date(timeIntervalSince1970: TimeInterval(self.gameStartTimestamp / 1000))
     }
 
     @Transient
@@ -90,11 +90,13 @@ extension Match: Identifiable { }
 
 extension Match: Hashable {
     static func == (lhs: Match, rhs: Match) -> Bool {
-        lhs.gameID == rhs.gameID
+        lhs.gameID == rhs.gameID &&
+        lhs.gameStartTimestamp == rhs.gameStartTimestamp
     }
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.gameID)
+        hasher.combine(self.gameStartTimestamp)
     }
 }
 
