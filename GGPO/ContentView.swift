@@ -11,6 +11,8 @@ import SwiftData
 struct ContentView: View {
     private let urlSession = URLSessionService()
 
+    @Environment(\.modelContext) private var modelContext
+
     @FocusState private var isFocused: Bool
     @State private var givenName: String = ""
 
@@ -36,12 +38,19 @@ struct ContentView: View {
 
                 Button("Start") {
                     self.isFocused = false
+
+                    let context = try! ModelContext(ModelContainer(for: Summoner.self))
                     Task {
                         do {
                             let summoner = try await self.urlSession.fetchSummoner(by: self.text)
-                            print(summoner)
+                            modelContext.insert(summoner)
+                            let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
+                            print(summoners.map { $0.name })
                         } catch {
-                            //
+                            if try! context.fetch(FetchDescriptor<Summoner>()).isEmpty {
+                                context.insert(Summoner.random())
+                                try! context.save()
+                            }
                         }
                     }
                 }
@@ -51,7 +60,7 @@ struct ContentView: View {
             Spacer()
         }
         .background(.white)
-        .padding(.horizontal, 24)
+        .padding(.horizontal)
         .onAppear {
             self.isFocused = true
         }

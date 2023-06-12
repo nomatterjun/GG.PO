@@ -12,11 +12,13 @@ struct ParticipantDTO: Decodable, DataTransferObject {
     let lane: String
     let teamPosition: String
     let isWin: Bool
+    let puuid: String
 
     enum CodingKeys: String, CodingKey {
         case individualPosition
         case lane
         case teamPosition
         case isWin = "win"
+        case puuid
     }
 }

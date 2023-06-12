@@ -1,6 +1,6 @@
 //
 //  RecentWidgetRecordsView.swift
-//  GGPO
+//  Widgets
 //
 //  Created by 이창준 on 6/10/23.
 //
@@ -31,5 +31,5 @@ struct RecentWidgetRecordsView: View {
 }
 
 #Preview {
-    RecentWidgetRecordsView(matches: [Match(date: .now, isWin: true)])
+    RecentWidgetRecordsView(matches: [Match.random()])
 }

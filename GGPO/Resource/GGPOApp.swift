@@ -16,6 +16,7 @@ struct GGPOApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Summoner.self, Match.self])
     }
     
 }

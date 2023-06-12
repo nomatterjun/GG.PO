@@ -3,8 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserActivityTypes</key>
-	<array>
-		<string>DynamicSummonerSelectionIntent</string>
-	</array>
+	<array/>
 </dict>
 </plist>
