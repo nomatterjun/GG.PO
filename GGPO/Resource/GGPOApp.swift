@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 @main
 struct GGPOApp: App {
@@ -15,6 +16,7 @@ struct GGPOApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Item.self)
+        .modelContainer(Summoner.container)
     }
+    
 }

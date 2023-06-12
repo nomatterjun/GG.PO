@@ -9,52 +9,81 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    private let urlSession = URLSessionService()
+
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-    
+
+    @FocusState private var isFocused: Bool
+    @State private var givenName: String = ""
+
+    @State private var text: String = ""
+    @State private var tapped: Bool = false
+
+    @State private var networkDone: Bool = false
+
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        VStack {
+            VStack(spacing: 4) {
+                Text("League of Legends")
+                    .font(.system(size: 24, weight: .bold))
+
+                Text("Win Streaks Tracker")
+                    .font(.system(size: 18, weight: .semibold))
+            }
+            .padding(.top, 48)
+
+            Spacer()
+
+            VStack(spacing: 24) {
+                if $networkDone.wrappedValue {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(.green)
+                        .animation(.bouncy, value: true)
+                } else {
+                    Image(systemName: "circle.dotted")
+                }
+
+                GPTextField(text: self.$text)
+                    .focused(self.$isFocused)
+
+                Button("Start") {
+                    self.isFocused = false
+                    Task {
+                        do {
+                            let summoner = try await self.urlSession.fetchSummoner(by: self.text)
+                            let matchIDs = try await self.urlSession.fetchRecentMatches(by: summoner.puuid)
+                            for matchID in matchIDs {
+                                let match = try await self.urlSession.fetchMatch(matchID)
+                                print(match.date)
+                                modelContext.insert(match)
+                                summoner.matches.append(match)
+                            }
+                            print(summoner.matches.map { $0.date })
+                            modelContext.insert(summoner)
+                            try? modelContext.save()
+                            networkDone = true
+                        } catch {
+                            print(error)
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .buttonStyle(GPButtonStyle(backgroundColor: .primary, foreGroundColor: .white))
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            Spacer()
         }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+        .background(.white)
+        .padding(.horizontal)
+        .onAppear {
+            self.isFocused = true
+            modelContext.autosaveEnabled = true
+        }
+        .onTapGesture {
+            self.isFocused = false
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
