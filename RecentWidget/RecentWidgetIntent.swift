@@ -72,8 +72,10 @@ struct SummonerEntityQuery: EntityQuery {
         logger.info("Loading summoners..")
         let modelContext = ModelContext(Summoner.container)
         let summoners = try! modelContext.fetch(FetchDescriptor<Summoner>())
-        print(summoners)
         logger.info("Found \(summoners.count) summoners")
+
+        let matches = try! modelContext.fetch(FetchDescriptor<Match>())
+        logger.info("Found \(matches.count) matches")
         return summoners.map { SummonerEntity(from: $0) }
     }
 }

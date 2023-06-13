@@ -17,8 +17,8 @@ struct RecentWidgetEntryView: View {
             let summoner = self.entry.configuration.summoner
             if let selectedSummoner = summoners.first(where: { $0.puuid == summoner.puuid }) {
                 let _ = print(selectedSummoner.matches.map { $0.date })
-                RecentWidgetInfoView(matches: selectedSummoner.matches)
-                RecentWidgetRecordsView(matches: selectedSummoner.matches)
+                RecentWidgetInfoView(summoner: summoner.puuid, matches: selectedSummoner.matches)
+                RecentWidgetRecordsView(summoner: summoner.puuid, matches: selectedSummoner.matches)
             } else {
                 Text("등록된 소환사 정보가 없습니다.")
                     .foregroundStyle(.gray)

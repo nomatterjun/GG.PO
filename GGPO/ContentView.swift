@@ -62,6 +62,9 @@ struct ContentView: View {
                             modelContext.insert(summoner)
                             try? modelContext.save()
                             networkDone = true
+
+                            let matches = try! modelContext.fetch(FetchDescriptor<Match>())
+                            print(matches.map { $0.gameID })
                         } catch {
                             print(error)
                         }

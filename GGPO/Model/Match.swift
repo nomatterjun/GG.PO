@@ -59,9 +59,9 @@ final class Match {
         return Date(timeIntervalSince1970: TimeInterval(self.gameStartTimestamp / 1000))
     }
 
-    @Transient
-    var isWin: Bool {
-        return self.participants.first!.isWin
+    func isWin(for puuid: String) -> Bool {
+        let participant = participant(for: puuid)
+        return participant.isWin
     }
 
     func participant(for puuid: String) -> Participant {

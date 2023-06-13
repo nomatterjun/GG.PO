@@ -9,6 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct RecentWidgetRecordsView: View {
+    var summoner: String
     var matches: [Match]
 
     let columns: [GridItem] = [
@@ -23,7 +24,7 @@ struct RecentWidgetRecordsView: View {
         LazyVGrid(columns: columns, alignment: .leading, spacing: 6) {
             ForEach(self.matches.prefix(15), id: \.id) { match in
                 RoundedRectangle(cornerRadius: 4)
-                    .fill(match.isWin ? .blue : .red)
+                    .fill(match.isWin(for: summoner) ? .blue : .red)
                     .frame(height: 32)
             }
         }
@@ -31,5 +32,5 @@ struct RecentWidgetRecordsView: View {
 }
 
 #Preview {
-    RecentWidgetRecordsView(matches: [Match.random()])
+    RecentWidgetRecordsView(summoner: "", matches: [Match.random()])
 }

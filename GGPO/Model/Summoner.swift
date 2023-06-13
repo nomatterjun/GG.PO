@@ -18,7 +18,7 @@ final class Summoner: Storable {
     var summonerID: String
     @Attribute(.unique) let puuid: String
     var summonerLevel: Int
-
+    
     var matches: [Match] = []
 
     init(accountID: String, profileIconID: Int, revisionDate: Int, name: String, summonerID: String, puuid: String, summonerLevel: Int) {

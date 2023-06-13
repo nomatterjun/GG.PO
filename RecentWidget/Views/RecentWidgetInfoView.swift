@@ -9,6 +9,7 @@ import SwiftUI
 import WidgetKit
 
 struct RecentWidgetInfoView: View {
+    var summoner: String
     var matches: [Match]
 
     var body: some View {
@@ -19,7 +20,7 @@ struct RecentWidgetInfoView: View {
 
 //                let todayRecords = self.matches.filter { $0.date.isToday }
                 if matches.count != 0 {
-                    let wonTodayRecords = matches.filter { $0.isWin }
+                    let wonTodayRecords = matches.filter { $0.isWin(for: summoner) }
                     let winRate = round(Double(wonTodayRecords.count) / Double(matches.count) * 100)
                     Text(String(Int(winRate)) + "%")
                         .font(.system(size: 32, weight: .bold))
@@ -42,5 +43,5 @@ struct RecentWidgetInfoView: View {
 }
 
 #Preview {
-    RecentWidgetInfoView(matches: [Match.random()])
+    RecentWidgetInfoView(summoner: "", matches: [Match.random()])
 }

@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class Participant {
-    let id: UUID
+    let id: UUID = UUID()
     var individualPosition: String
     var lane: String
     var teamPosition: String
